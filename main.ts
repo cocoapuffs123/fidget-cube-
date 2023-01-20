@@ -1,5 +1,16 @@
+let rps = 0
 input.onButtonPressed(Button.A, function () {
     basic.showString("Hello!")
+})
+input.onGesture(Gesture.LogoUp, function () {
+    rps = randint(1, 3)
+    if (rps == 1) {
+        basic.showString("s")
+    } else if (rps == 2) {
+        basic.showString("p")
+    } else if (rps == 3) {
+        basic.showString("r")
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     music.startMelody(music.builtInMelody(Melodies.Funk), MelodyOptions.Once)
